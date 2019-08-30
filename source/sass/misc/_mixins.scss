@@ -15,3 +15,68 @@
          url("../fonts/#{to-lower-case($fontNameSecond)}.woff") format("woff");
   }
 }
+
+@mixin text($color: $colorText, $fontSize: $fontSizeText, $lineHeight: $lineHeightRegular) {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  font: #{$fontSize}/#{$lineHeight} $fontFamilyText;
+  color: $color;
+}
+
+@mixin text-alt($color: null, $fontSize: $fontSizeTextXLarge) {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  font: $fontWeightThin $fontSize $fontFamilyTextAlt;
+  color: $color;
+}
+
+@mixin title-large($color: null, $fontSize: $fontSizeTitleLarge, $lineHeight: $lineHeightLarge, $isCenter: true) {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  font: {
+    weight: $fontWeightBold;
+    size: $fontSize;
+    family: $fontFamilyTitle;
+  }
+  line-height: $lineHeight;
+  text-align: if($isCenter, center, null);
+  color: $color;
+}
+
+@mixin title($color: null, $fontSize: $fontSizeTitleSmall, $lineHeight: $lineHeightTiny, $isBold: true, $isCenter: true, $isUppercase: true) {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  font: {
+    weight: if($isBold, $fontWeightBold, $fontWeightNormal);
+    size: $fontSize;
+    family: $fontFamilyTitle;
+  }
+  line-height: $lineHeight;
+  text-align: if($isCenter, center, null);
+  color: $color;
+  text-transform: if($isUppercase, uppercase, null);
+}
+
+@mixin title-small($color: null, $fontSize: $fontSizeTextSmall, $isLineHeight: true, $isCenter: true) {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+  font: {
+    weight: $fontWeightBold;
+    size: $fontSize;
+    family: $fontFamilyTitle;
+  }
+  line-height: if($isLineHeight, $lineHeightTiny, normal);
+  text-align: if($isCenter, center, null);
+  color: $color;
+  text-transform: uppercase;
+}

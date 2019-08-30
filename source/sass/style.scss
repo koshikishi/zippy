@@ -1,3 +1,5 @@
 @import "misc/variables";
 @import "misc/mixins";
 @import "misc/fonts";
+@import "misc/extends", "blocks/visually-hidden";
+@import "misc/base", "blocks/page";
