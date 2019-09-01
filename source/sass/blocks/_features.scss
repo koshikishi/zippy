@@ -1,0 +1,83 @@
+.features {
+  @extend %container;
+  padding-top: 84px;
+}
+
+.features__heading {
+  min-height: 297px;
+  margin-bottom: 35px;
+}
+
+.features__title {
+  @include title-large;
+  margin-bottom: 75px;
+}
+
+.features__text {
+  @include text-alt;
+  position: relative;
+  width: 440px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    right: -251px;
+    width: 187px;
+    height: 195px;
+    background: url("../img/features_heading.svg") center no-repeat;
+  }
+}
+
+.features__list {
+  @extend %list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 58px;
+  border-bottom: 2px solid rgba($colorSeparator, 0.5)
+}
+
+.features__item {
+  position: relative;
+  width: 161px;
+  padding-top: 139px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: {
+      color: $colorPrimary;
+      repeat: no-repeat;
+      position: center;
+    }
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  @each $icon in bell, envelop, drawer {
+    &--#{$icon} {
+      &::before {
+        background-image: url("../img/features_icon-#{$icon}.svg");
+      }
+    }
+  }
+}
+
+.features__item-title {
+  @include title($color: $colorPrimary, $lineHeight: normal);
+  margin-bottom: 18px;
+}
+
+.features__item-text {
+  margin: {
+    top: 0;
+    bottom: 33px;
+  }
+  opacity: 0.5;
+}

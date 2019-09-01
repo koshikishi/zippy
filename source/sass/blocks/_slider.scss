@@ -5,10 +5,8 @@
 }
 
 .slider__list {
+  @extend %list-reset;
   height: inherit;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .slider__item {
@@ -57,7 +55,7 @@
   left: 348px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 700px;
+  max-width: 704px;
 }
 
 .slider__dot {

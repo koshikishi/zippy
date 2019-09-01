@@ -19,4 +19,11 @@
     background-color: $colorPrimary;
     outline: none;
   }
+
+  &--second {
+    &:hover,
+    &:focus {
+      color: $colorWhiteDark;
+    }
+  }
 }
