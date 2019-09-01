@@ -1,0 +1,16 @@
+.header {
+  padding: {
+    top: 41px;
+    bottom: 11px;
+  }
+}
+
+.header__wrapper {
+  @extend %container;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__main-nav {
+  margin-top: 15px;
+}
