@@ -33,16 +33,25 @@
   @extend %list-reset;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 58px;
+  justify-content: center;
+  padding-bottom: 25px;
   border-bottom: 2px solid rgba($colorSeparator, 0.5)
 }
 
 .features__item {
   position: relative;
   width: 161px;
+  margin: {
+    right: 104px;
+    bottom: 33px;
+  }
   padding-top: 139px;
   text-align: center;
+
+  &:nth-child(3n),
+  &:last-child {
+    margin-right: 0;
+  }
 
   &::before {
     content: "";
