@@ -23,12 +23,10 @@
     background-color: $colorGrayXDark;
   }
 
-  &:hover {
-    background-color: $colorSecondary;
-  }
-
-  &:focus-within {
-    background-color: $colorSecondary;
+  @each $state in hover, focus-within {
+    &:#{$state} {
+      background-color: $colorSecondary;
+    }
   }
 }
 
