@@ -1,0 +1,49 @@
+.pricing {
+  @extend %container;
+  padding: {
+    top: 85px;
+    bottom: 45px;
+  }
+}
+
+.pricing__title {
+  @include title-large;
+  margin-bottom: 51px;
+}
+
+.pricing__list {
+  @extend %list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pricing__item {
+  width: 177px;
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+.pricing__item-title {
+  @include title($lineHeight: normal);
+  margin-bottom: 16px;
+}
+
+.pricing__item-price {
+  @include title($lineHeight: normal, $isBold: false, $isUppercase: false);
+  margin-bottom: 12px;
+  opacity: 0.39;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.pricing__item-text {
+  margin: {
+    top: 0;
+    bottom: 19px;
+  }
+  font-size: $fontSizeTextSmall;
+  line-height: $lineHeightSmall;
+}
