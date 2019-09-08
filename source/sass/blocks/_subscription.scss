@@ -1,0 +1,40 @@
+.subscription {
+  background: url("../img/subscription_bg.jpg") top no-repeat $colorGrayXXDark;
+}
+
+.subscription__wrapper {
+  @extend %container;
+  padding: {
+    top: 55px;
+    bottom: 145px;
+  }
+}
+
+.subscription__title {
+  @include title-large($colorWhite);
+  margin-bottom: 35px;
+}
+
+.subscription__form {
+  display: flex;
+  justify-content: center;
+  width: 547px;
+  margin: {
+    right: auto;
+    left: auto;
+  }
+}
+
+.subscription__field {
+  @include title($colorText, $fontSizeTextLarge, $lineHeightLarge, $isBold: false, $isCenter: false, $isUppercase: false);
+  flex-grow: 1;
+  padding: 7px 16px;
+  border: none {
+    radius: 3px 0 0 3px;
+  };
+
+  &::placeholder {
+    color: $colorPlaceholder;
+    opacity: 1;
+  }
+}

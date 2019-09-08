@@ -36,4 +36,9 @@
     width: 81px;
     padding: 7px 10px;
   }
+
+  &--square {
+    width: 132px;
+    border-radius: 0 3px 3px 0;
+  }
 }
