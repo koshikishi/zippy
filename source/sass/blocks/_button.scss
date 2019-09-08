@@ -27,6 +27,17 @@
     }
   }
 
+  &--third {
+    width: 125px;
+    background-color: $colorGrayDark;
+
+    &:hover,
+    &:focus {
+      color: $colorTextLight;
+      background-color: $colorSecondary;
+    }
+  }
+
   &--white {
     width: 162px;
     background-color: $colorWhiteDark;
