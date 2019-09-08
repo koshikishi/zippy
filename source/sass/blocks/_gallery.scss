@@ -39,8 +39,10 @@
   border: none;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $colorPrimary;
+    outline: none;
   }
 
   &::before {
