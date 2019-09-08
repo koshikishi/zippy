@@ -103,7 +103,7 @@ function clean() {
 }
 
 // Создание сборки проекта
-var build = gulp.series(clean, copy, gulp.parallel(css, sprite, html));
+var build = gulp.series(clean, copy, sprite, gulp.parallel(css, html));
 
 // Автообновление страницы
 function refresh(done) {
