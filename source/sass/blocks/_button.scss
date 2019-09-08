@@ -52,4 +52,13 @@
     width: 132px;
     border-radius: 0 3px 3px 0;
   }
+
+  &--wide {
+    width: 100%;
+    padding-bottom: 15px;
+    line-height: normal;
+    color: $colorWhiteDark;
+    background-color: $colorPrimary;
+    border-radius: 0;
+  }
 }

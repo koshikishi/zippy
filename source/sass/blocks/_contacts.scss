@@ -1,0 +1,58 @@
+.contacts {
+  display: flex;
+  background-color: $colorSecondary;
+}
+
+.contacts__map {
+  flex-grow: 1;
+  min-width: 700px;
+  background-color: $colorGrayXXDark;
+  transform: translateX(-8px);
+
+  img {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.contacts__form {
+  flex-grow: 1;
+  box-sizing: border-box;
+  min-width: 700px;
+  padding: 48px 44px;
+  transform: translateX(-8px);
+}
+
+.contacts__form-inner {
+  width: 310px;
+}
+
+.contacts__form-title {
+  @include title-large($isCenter: false);
+  margin-bottom: 29px;
+}
+
+.contacts__form-label {
+  @include title-small($colorTextLight, $isLineHeight: false, $isCenter: false);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 15px;
+  }
+
+  span {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__form-field {
+  padding: 14px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba($colorShadow, 0.09);
+
+  &--large {
+    height: 116px;
+  }
+}
