@@ -3,7 +3,450 @@
   <head>
     <meta charset="utf-8">
     <title>Zippy | Simple Landing</title>
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/roboto-thin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body class="page">
+    <div hidden>
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="header page__header">
+      <div class="header__wrapper">
+        <a class="logo">
+          <img class="logo__image" src="img/logo.png" alt="Zippy Logo" width="77" height="21">
+        </a>
+        <nav class="main-nav header__main-nav">
+          <a class="main-nav__link main-nav__link--active">Home</a>
+          <a class="main-nav__link" href="projects.html">Projects</a>
+          <a class="main-nav__link" href="price.html">Pricing</a>
+          <a class="main-nav__link" href="team.html">Team</a>
+          <a class="main-nav__link" href="blog.html">Blog</a>
+          <a class="main-nav__link" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Zippy — Simple Landing</h1>
+      <section class="slider">
+        <ul class="slider__list">
+          <li class="slider__item slider__item--second slider__item--active">
+            <div class="slider__content">
+              <h2 class="slider__title">One page promising to fill all your needs!</h2>
+              <p class="slider__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+              <a class="button" href="#">Learn More</a>
+            </div>
+          </li>
+        </ul>
+        <div class="slider__control">
+          <button class="slider__dot" type="button">
+            <span class="visually-hidden">First Slide</span>
+          </button>
+          <button class="slider__dot slider__dot--active" type="button">
+            <span class="visually-hidden">Second Slide</span>
+          </button>
+          <button class="slider__dot" type="button">
+            <span class="visually-hidden">Third Slide</span>
+          </button>
+          <button class="slider__dot" type="button">
+            <span class="visually-hidden">Fourth Slide</span>
+          </button>
+        </div>
+      </section>
+      <section class="features">
+        <div class="features__heading">
+          <h2 class="features__title">Welcome to Zippy</h2>
+          <p class="features__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.</p>
+        </div>
+        <ul class="features__list">
+          <li class="features__item features__item--bell">
+            <h3 class="features__item-title">Lorem Ipsum</h3>
+            <p class="features__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+            <a class="button button--second" href="#">Learn More</a>
+          </li>
+          <li class="features__item features__item--envelop">
+            <h3 class="features__item-title">Dolor Sit</h3>
+            <p class="features__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+            <a class="button button--second" href="#">Learn More</a>
+          </li>
+          <li class="features__item features__item--drawer">
+            <h3 class="features__item-title">Consecteture</h3>
+            <p class="features__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+            <a class="button button--second" href="#">Learn More</a>
+          </li>
+        </ul>
+      </section>
+      <section class="projects">
+        <h2 class="projects__title">Projects</h2>
+        <ul class="projects__list">
+          <li class="projects__item">
+            <img class="projects__item-image" src="img/project_01.jpg" alt="Project image" width="350" height="485">
+            <div class="projects__item-content">
+              <h3 class="projects__item-title">Project Name</h3>
+              <p class="projects__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+              <a class="button button--white" href="#">Launch Case Study</a>
+            </div>
+          </li>
+          <li class="projects__item">
+            <img class="projects__item-image" src="img/project_02.jpg" alt="Project image" width="350" height="485">
+            <div class="projects__item-content">
+              <h3 class="projects__item-title">Project Name</h3>
+              <p class="projects__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+              <a class="button button--white" href="#">Launch Case Study</a>
+            </div>
+          </li>
+          <li class="projects__item">
+            <img class="projects__item-image" src="img/project_03.jpg" alt="Project image" width="350" height="485">
+            <div class="projects__item-content">
+              <h3 class="projects__item-title">Project Name</h3>
+              <p class="projects__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+              <a class="button button--white" href="#">Launch Case Study</a>
+            </div>
+          </li>
+          <li class="projects__item">
+            <img class="projects__item-image" src="img/project_04.jpg" alt="Project image" width="350" height="485">
+            <div class="projects__item-content">
+              <h3 class="projects__item-title">Project Name</h3>
+              <p class="projects__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+              <a class="button button--white" href="#">Launch Case Study</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="pricing">
+        <h2 class="pricing__title">Pricing Table</h2>
+        <ul class="pricing__list">
+          <li class="pricing__item">
+            <h3 class="pricing__item-title">Standard Plan</h3>
+            <p class="pricing__item-price">Free</p>
+            <p class="pricing__item-text">
+              2 GB Available<br>
+              15 max. contacts<br>
+              30 Messages/month<br>
+              Disgusting Ads
+            </p>
+            <a class="button button--second button--small" href="#">Buy</a>
+          </li>
+          <li class="pricing__item">
+            <h3 class="pricing__item-title">Business Plan</h3>
+            <p class="pricing__item-price pricing__item-price--uppercase">19$/month</p>
+            <p class="pricing__item-text">
+              10 GB Available<br>
+              75 max. contacts<br>
+              120 Messages/month<br>
+              Ads Free
+            </p>
+            <a class="button button--second button--small" href="#">Buy</a>
+          </li>
+          <li class="pricing__item">
+            <h3 class="pricing__item-title">Premium Plan</h3>
+            <p class="pricing__item-price pricing__item-price--uppercase">14$/month</p>
+            <p class="pricing__item-text">
+              100 GB Available<br>
+              Unlimited Contacts<br>
+              Unlimited Messages/month<br>
+              Ads Free
+            </p>
+            <a class="button button--second button--small" href="#">Buy</a>
+          </li>
+        </ul>
+      </section>
+      <section class="video">
+        <h2 class="video__title">Video Projects</h2>
+        <ul class="video__list">
+          <li class="video__item">
+            <a class="video__link" href="#">
+              <img class="video__image" src="img/video_01.jpg" alt="Video cover" width="690" height="460">
+            </a>
+            <p class="video__item-info">
+              <span class="video__item-title">Video title</span>
+              <span class="video__item-time">9:10</span>
+            </p>
+          </li>
+          <li class="video__item">
+            <a class="video__link" href="#">
+              <img class="video__image" src="img/video_02.jpg" alt="Video cover" width="690" height="460">
+            </a>
+            <p class="video__item-info">
+              <span class="video__item-title">Video title</span>
+              <span class="video__item-time">9:10</span>
+            </p>
+          </li>
+          <li class="video__item">
+            <a class="video__link" href="#">
+              <img class="video__image" src="img/video_03.jpg" alt="Video cover" width="690" height="460">
+            </a>
+            <p class="video__item-info">
+              <span class="video__item-title">Video title</span>
+              <span class="video__item-time">9:10</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="team">
+        <h2 class="team__title">Zippy Team</h2>
+        <ul class="team__list">
+          <li class="team__item">
+            <div class="team__image">
+              <img class="team__portrait" src="img/team_01.jpg" alt="Sara Johnson's photo" width="173" height="173">
+              <div class="team__social">
+                <a class="team__social-link team__social-link--facebook" href="https://www.facebook.com/" target="_blank">
+                  <span class="visually-hidden">Facebook profile</span>
+                </a>
+                <a class="team__social-link team__social-link--twitter" href="https://twitter.com/" target="_blank">
+                  <span class="visually-hidden">Twitter account</span>
+                </a>
+                <a class="team__social-link team__social-link--google-plus" href="https://plus.google.com/" target="_blank">
+                  <span class="visually-hidden">Google+ account</span>
+                </a>
+              </div>
+            </div>
+            <p class="team__name">Sara Johnson</p>
+            <p class="team__position">Creative Head</p>
+          </li>
+          <li class="team__item">
+            <div class="team__image">
+              <img class="team__portrait" src="img/team_02.jpg" alt="Matt Alex's photo" width="173" height="173">
+              <div class="team__social">
+                <a class="team__social-link team__social-link--facebook" href="https://www.facebook.com/" target="_blank">
+                  <span class="visually-hidden">Facebook profile</span>
+                </a>
+                <a class="team__social-link team__social-link--twitter" href="https://twitter.com/" target="_blank">
+                  <span class="visually-hidden">Twitter account</span>
+                </a>
+                <a class="team__social-link team__social-link--google-plus" href="https://plus.google.com/" target="_blank">
+                  <span class="visually-hidden">Google+ account</span>
+                </a>
+              </div>
+            </div>
+            <p class="team__name">Matt Alex</p>
+            <p class="team__position">Art Director</p>
+          </li>
+          <li class="team__item">
+            <div class="team__image">
+              <img class="team__portrait" src="img/team_03.jpg" alt="Chris Philips's photo" width="173" height="173">
+              <div class="team__social">
+                <a class="team__social-link team__social-link--facebook" href="https://www.facebook.com/" target="_blank">
+                  <span class="visually-hidden">Facebook profile</span>
+                </a>
+                <a class="team__social-link team__social-link--twitter" href="https://twitter.com/" target="_blank">
+                  <span class="visually-hidden">Twitter account</span>
+                </a>
+                <a class="team__social-link team__social-link--google-plus" href="https://plus.google.com/" target="_blank">
+                  <span class="visually-hidden">Google+ account</span>
+                </a>
+              </div>
+            </div>
+            <p class="team__name">Chris Philips</p>
+            <p class="team__position">Senior Designer</p>
+          </li>
+          <li class="team__item">
+            <div class="team__image">
+              <img class="team__portrait" src="img/team_04.jpg" alt="Jimmy Smith's photo" width="173" height="173">
+              <div class="team__social">
+                <a class="team__social-link team__social-link--facebook" href="https://www.facebook.com/" target="_blank">
+                  <span class="visually-hidden">Facebook profile</span>
+                </a>
+                <a class="team__social-link team__social-link--twitter" href="https://twitter.com/" target="_blank">
+                  <span class="visually-hidden">Twitter account</span>
+                </a>
+                <a class="team__social-link team__social-link--google-plus" href="https://plus.google.com/" target="_blank">
+                  <span class="visually-hidden">Google+ account</span>
+                </a>
+              </div>
+            </div>
+            <p class="team__name">Jimmy Smith</p>
+            <p class="team__position">Marketing Manager</p>
+          </li>
+          <li class="team__item">
+            <div class="team__image">
+              <img class="team__portrait" src="img/team_05.jpg" alt="Aliza's photo" width="173" height="173">
+              <div class="team__social">
+                <a class="team__social-link team__social-link--facebook" href="https://www.facebook.com/" target="_blank">
+                  <span class="visually-hidden">Facebook profile</span>
+                </a>
+                <a class="team__social-link team__social-link--twitter" href="https://twitter.com/" target="_blank">
+                  <span class="visually-hidden">Twitter account</span>
+                </a>
+                <a class="team__social-link team__social-link--google-plus" href="https://plus.google.com/" target="_blank">
+                  <span class="visually-hidden">Google+ account</span>
+                </a>
+              </div>
+            </div>
+            <p class="team__name">Aliza</p>
+            <p class="team__position team__position--uppercase">SEO Monster</p>
+          </li>
+          <li class="team__item">
+            <div class="team__image">
+              <img class="team__portrait" src="img/team_06.jpg" alt="Celien John's photo" width="173" height="173">
+              <div class="team__social">
+                <a class="team__social-link team__social-link--facebook" href="https://www.facebook.com/" target="_blank">
+                  <span class="visually-hidden">Facebook profile</span>
+                </a>
+                <a class="team__social-link team__social-link--twitter" href="https://twitter.com/" target="_blank">
+                  <span class="visually-hidden">Twitter account</span>
+                </a>
+                <a class="team__social-link team__social-link--google-plus" href="https://plus.google.com/" target="_blank">
+                  <span class="visually-hidden">Google+ account</span>
+                </a>
+              </div>
+            </div>
+            <p class="team__name">Celien John</p>
+            <p class="team__position">Senior Designer</p>
+          </li>
+        </ul>
+      </section>
+      <section class="gallery">
+        <div class="gallery__wrapper">
+          <h2 class="gallery__title">Life in Zippy</h2>
+          <img class="gallery__image-full" src="img/gallery_05-full.jpg" alt="Gallery photo" width="692" height="430">
+          <div class="gallery__previews">
+            <div class="gallery__control">
+              <button class="gallery__button gallery__button--prev" type="button">
+                <span class="visually-hidden">Previous Photos</span>
+              </button>
+              <button class="gallery__button gallery__button--next" type="button">
+                <span class="visually-hidden">Next Photos</span>
+              </button>
+            </div>
+            <div class="gallery__previews-list">
+              <button class="gallery__preview">
+                <img class="gallery__image-preview" src="img/gallery_01-preview.jpg" alt="Gallery preview" width="111" height="69">
+              </button>
+              <button class="gallery__preview">
+                <img class="gallery__image-preview" src="img/gallery_02-preview.jpg" alt="Gallery preview" width="111" height="69">
+              </button>
+              <button class="gallery__preview">
+                <img class="gallery__image-preview" src="img/gallery_03-preview.jpg" alt="Gallery preview" width="111" height="69">
+              </button>
+              <button class="gallery__preview">
+                <img class="gallery__image-preview" src="img/gallery_04-preview.jpg" alt="Gallery preview" width="111" height="69">
+              </button>
+              <button class="gallery__preview">
+                <img class="gallery__image-preview" src="img/gallery_05-preview.jpg" alt="Gallery preview" width="111" height="69">
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subscription">
+        <div class="subscription__wrapper">
+          <h2 class="subscription__title">Newsletter Signup</h2>
+          <form class="subscription__form" action="#" method="post">
+            <input class="subscription__field" type="email" name="email" placeholder="abc@example.com" aria-label="Your email for subscription">
+            <button class="button button--second button--square" type="submit">Sign Up</button>
+          </form>
+        </div>
+      </section>
+      <section class="blog">
+        <h2 class="blog__title">Blog</h2>
+        <ul class="blog__list">
+          <li class="blog__preview">
+            <img class="blog__preview-image" src="img/blog_01-preview.jpg" alt="Blog post preview" width="206" height="111">
+            <div class="blog__preview-content">
+              <h3 class="blog__preview-title">Lorem Ipsum Dolor sit Amet</h3>
+              <p class="blog__preview-date">15 Jan, 2015</p>
+              <p class="blog__preview-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+              <a class="button button--third" href="#">Read More</a>
+            </div>
+          </li>
+          <li class="blog__preview">
+            <img class="blog__preview-image" src="img/blog_02-preview.jpg" alt="Blog post preview" width="206" height="111">
+            <div class="blog__preview-content">
+              <h3 class="blog__preview-title">Lorem Ipsum Dolor sit Amet</h3>
+              <p class="blog__preview-date">15 Jan, 2015</p>
+              <p class="blog__preview-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+              <a class="button button--third" href="#">Read More</a>
+            </div>
+          </li>
+          <li class="blog__preview">
+            <img class="blog__preview-image" src="img/blog_03-preview.jpg" alt="Blog post preview" width="206" height="111">
+            <div class="blog__preview-content">
+              <h3 class="blog__preview-title">Lorem Ipsum Dolor sit Amet</h3>
+              <p class="blog__preview-date">15 Jan, 2015</p>
+              <p class="blog__preview-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+              <a class="button button--third" href="#">Read More</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="contacts">
+        <div class="contacts__map">
+          <img src="img/map.png" alt="We are at Lorem Ipsum dolor, 234, 1200 Consecture, Adipsching" width="692" height="654">
+        </div>
+        <form class="contacts__form" action="#" method="post">
+          <div class="contacts__form-inner">
+            <h2 class="contacts__form-title">Contact</h2>
+            <label class="contacts__form-label">
+              <span>Name</span>
+              <input class="contacts__form-field" type="text" name="name">
+            </label>
+            <label class="contacts__form-label">
+              <span>Email address</span>
+              <input class="contacts__form-field" type="email" name="email">
+            </label>
+            <label class="contacts__form-label">
+              <span>Subject</span>
+              <input class="contacts__form-field" type="text" name="subject">
+            </label>
+            <label class="contacts__form-label">
+              <span>Message</span>
+              <textarea class="contacts__form-field contacts__form-field--large" name="message" cols="30" rows="10"></textarea>
+            </label>
+            <button class="button button--wide button--second" type="submit">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__columns">
+        <div class="footer__column">
+          <h3 class="footer__title">Office Address</h3>
+          <address class="footer__text">
+            Lorem Ipsum dolor, 234<br>
+            1200 Consecture<br>
+            Adipsching
+          </address>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Follow Us</h3>
+          <div class="footer__social">
+            <a class="footer__social-link" href="https://www.behance.net/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 23.563 15.47"><use xlink:href="#icon-behance"></use></svg>
+              <span class="visually-hidden">Zippy on Behance</span>
+            </a>
+            <a class="footer__social-link" href="https://twitter.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14.719 11.78"><use xlink:href="#icon-twitter"></use></svg>
+              <span class="visually-hidden">Zippy on Twitter</span>
+            </a>
+            <a class="footer__social-link" href="https://www.linkedin.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16.219 15.5"><use xlink:href="#icon-linkedin"></use></svg>
+              <span class="visually-hidden">Zippy on LinkedIn</span>
+            </a>
+            <a class="footer__social-link" href="https://www.facebook.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="15" viewBox="0 0 7.375 15.47"><use xlink:href="#icon-facebook"></use></svg>
+              <span class="visually-hidden">Zippy on Facebook</span>
+            </a>
+            <a class="footer__social-link" href="https://plus.google.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 17.687 15.47"><use xlink:href="#icon-google-plus"></use></svg>
+              <span class="visually-hidden">Zippy on Google+</span>
+            </a>
+            <a class="footer__social-link" href="https://www.tumblr.com/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 9.594 15.47"><use xlink:href="#icon-tumblr"></use></svg>
+              <span class="visually-hidden">Zippy on Tumblr</span>
+            </a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Contact Us</h3>
+          <p class="footer__text">
+            + 123 456 789<br>
+            zippy@skype<br>
+            enquiry@zippy.com
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

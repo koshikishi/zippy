@@ -1,0 +1,52 @@
+.projects {
+  padding-top: 54px;
+}
+
+.projects__title {
+  @include title-large;
+  margin-bottom: 53px;
+}
+
+.projects__list {
+  @extend %list-reset;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.projects__item {
+  flex-shrink: 0;
+  width: 350px;
+  background-color: $colorGray;
+
+  &:nth-child(even) {
+    background-color: $colorGrayXDark;
+  }
+
+  @each $state in hover, focus-within {
+    &:#{$state} {
+      background-color: $colorSecondary;
+    }
+  }
+}
+
+.projects__item-image {
+  display: block;
+}
+
+.projects__item-content {
+  padding: 43px 34px 46px 43px;
+}
+
+.projects__item-title {
+  @include title($lineHeight: normal, $isCenter: false);
+  margin-bottom: 9px;
+}
+
+.projects__item-text {
+  margin: {
+    top: 0;
+    bottom: 14px;
+  }
+  opacity: 0.5;
+}

@@ -1,0 +1,21 @@
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 605px;
+}
+
+.main-nav__link {
+  @include title-small($colorWhite, $isCenter: false);
+  margin: {
+    bottom: 14px;
+    left: 35px;
+  }
+
+  &:hover,
+  &:focus,
+  &--active {
+    color: $colorSecondary;
+    outline: none;
+  }
+}

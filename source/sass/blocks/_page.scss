@@ -1,0 +1,11 @@
+.page {
+  @include text;
+  min-width: 1400px;
+  margin: 0;
+  background-color: $colorWhiteDark;
+}
+
+.page__header {
+  position: absolute;
+  z-index: 1;
+}

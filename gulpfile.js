@@ -9,6 +9,7 @@ var cleancss = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var server = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
+var svgstore = require('gulp-svgstore');
 var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
 var htmlmin = require('gulp-htmlmin');
@@ -43,6 +44,7 @@ function server() {
   });
 
   gulp.watch('source/sass/**/*.{scss,sass}', css);
+  gulp.watch('source/img/icon-*.svg', gulp.series(gulp.parallel(sprite, html), refresh));
   gulp.watch('source/*.html', gulp.series(html, refresh));
 }
 
@@ -58,6 +60,16 @@ function img() {
       }),
       imagemin.svgo()
     ]))
+    .pipe(gulp.dest('build/img'));
+}
+
+// Сборка SVG-спрайта
+function sprite() {
+  return gulp.src('source/img/icon-*.svg')
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 }
 
@@ -91,7 +103,7 @@ function clean() {
 }
 
 // Создание сборки проекта
-var build = gulp.series(clean, copy, gulp.parallel(css, html));
+var build = gulp.series(clean, copy, sprite, gulp.parallel(css, html));
 
 // Автообновление страницы
 function refresh(done) {
@@ -106,6 +118,7 @@ function refresh(done) {
 exports.css = css;
 exports.server = server;
 exports.img = img;
+exports.sprite = sprite;
 exports.html = html;
 exports.copy = copy;
 exports.clean = clean;
